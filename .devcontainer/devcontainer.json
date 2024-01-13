@@ -1,0 +1,14 @@
+{
+    "name": "dev",
+    "dockerFile": "Dockerfile",
+    "postCreateCommand": "/bin/sh ./.devcontainer/commands.sh",
+    "remoteUser": "dev",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:~/.npm-global/bin"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {}
+        }
+    }
+}

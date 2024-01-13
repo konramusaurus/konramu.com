@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxt dev",
+    "generate": "nuxi generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "netlify": "netlify",
+    "netlify:deploy": "netlify deploy --build --open",
+    "netlify:proddeploy": "netlify deploy --build --prod --open"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/howler": "^2.2.7",
+    "autoprefixer": "^10.4.14",
+    "netlify-cli": "^13.1.6",
+    "nuxt": "^3.3.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.4",
+    "howler": "^2.2.3"
+  }
+}
