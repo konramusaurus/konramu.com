@@ -1,7 +1,7 @@
 <template>
   <Head>
     <Title>こんらむ～</Title>
-    <Meta name="description" content="スライムらむちゃんねる様のファンサイトです。いつでもこんらむできます。"/>
+    <Meta name="description" content="スライムらむちゃんねる様のファンサイトです。こんらむ～"/>
     <Meta charset="utf-8"/>
     <Meta name="viewport" content="width=device-width,initial-scale=1"/>
     <Meta name="keywords" content="スライムらむ,スライムらむちゃんねる,スライム系Vtuber,新人Vtuber,Vtuber" />
@@ -10,7 +10,7 @@
     <Meta name="twitter:site" content="@konramu_saurus" />
     <Meta name="twitter:title" content="こんらむ～" />
     <Meta name="twitter:description" content="いつでもこんらむできます。" />
-    <Meta name="twitter:image" content="https://i.gyazo.com/a76b3044f8db8bb759950a06ed498ee1.png" />
+    <Meta name="twitter:image" content="" />
   </Head>
 
   <header class="text-gray-600 body-font">
