@@ -32,7 +32,6 @@ const Props = withDefaults(defineProps<Props>(), {
 });
 
 const playAudio = (audioSrc: string) => {
-  console.log(audioSrc)
   const newAudio = new Audio(audioSrc);
   newAudio.play().catch(e => console.error('Error playing audio:', e));
 };
