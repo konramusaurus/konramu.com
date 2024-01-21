@@ -1,11 +1,12 @@
-interface Voice {
-  text: string;
-  voice: string;
+export interface Voice {
+  slug: string;
+  voice_url: string;
   tags: string[];
 }
 
-interface VoiceMap {
+export interface VoiceMap {
   title: string;
-  url: string;
+  publish_date: string;
+  video_url: string;
   voices: Voice[];
 }

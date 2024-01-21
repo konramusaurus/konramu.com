@@ -9,34 +9,33 @@
       </span>
     </p>
 
-    <button v-on:click="playSound" class="w-full mx-auto py-2 text-white bg-pink-500 focus:outline-none transition ease-in-out hover:duration-500 hover:bg-pink-600 rounded">{{ text }}</button>
+    <button class="w-full mx-auto py-2 text-white bg-pink-500 focus:outline-none transition ease-in-out hover:duration-500 hover:bg-pink-600 rounded" @click="playAudio(Props.voice_url)">
+      {{ slug }}
+    </button>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { Howl, Howler } from 'howler';
-
 const activeTab = useState('activeTab');
 
 interface Props {
-  text: string;
-  voice: string;
+  slug: string;
+  voice_url: string;
   tags: string[];
 }
 
 const Props = withDefaults(defineProps<Props>(), {
-  text: "",
-  voice: "",
+  slug: "",
+  voice_url: "",
   tags: [], 
 });
 
-const playSound = () => {
-  const sound = new Howl({
-    src: [Props.voice],
-    html5: false
-  });
-  sound.play();
-}
+const playAudio = (audioSrc: string) => {
+  console.log(audioSrc)
+  const newAudio = new Audio(audioSrc);
+  newAudio.play().catch(e => console.error('Error playing audio:', e));
+};
 
 const toggleTab = (tab: string) => {
   activeTab.value = tab;
@@ -45,5 +44,6 @@ const toggleTab = (tab: string) => {
     top: screen.height * 0.8,
     behavior: 'smooth'
   });
-}
+};
+
 </script>

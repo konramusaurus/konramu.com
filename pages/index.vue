@@ -15,14 +15,14 @@
     </div>
     <div>
       <div v-if="activeTab === 'all'">
-        <TabAll />
+        <TabAll :voices="voices" />
       </div>
       <div v-else>
-        <TabTag :tag="activeTab" />
+        <TabAll :voices="voices" />
+        <!--TabTag :tag="activeTab" /-->
       </div>
     </div>
   </div>
-
 </template>
 
 <style>
@@ -37,6 +37,21 @@
 </style>
 
 <script setup lang="ts">
+import type { VoiceMap } from '@/types/index';
+
+const url = 'https://raw.githubusercontent.com/konramusaurus/voices/main/index.json';
+const { data: voices, pending, error } = useFetch<VoiceMap[]>(url, {
+  initialData: [],
+  transform: (response) => {
+    try {
+      return JSON.parse(response);
+    } catch (e) {
+      console.error('JSON parsing error:', e);
+      return null;
+    }
+  }
+});
+
 const activeTab = useState('activeTab', () => 'all');
 
 const toggleTab = (tab: string) => {

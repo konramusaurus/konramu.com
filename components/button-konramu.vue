@@ -3,15 +3,15 @@
 </template>
 
 <script setup lang="ts">
-    import { Howl, Howler } from 'howler';
-
-    const playSound = () => {
-        const sound = new Howl({
-            src: [
-                'voices/konramu.mp3',
-            ],
-            html5: false
-        });
-        sound.play();
-    }
+// import { Howl, Howler } from 'howler';
+// 
+// const playSound = () => {
+//     const sound = new Howl({
+//         src: [
+//             'voices/konramu.mp3',
+//         ],
+//         html5: false
+//     });
+//     sound.play();
+// }
 </script>

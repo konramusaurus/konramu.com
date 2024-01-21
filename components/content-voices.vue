@@ -6,7 +6,7 @@
   </div>
   <div class="w-full mx-auto mt-5 flex flex-wrap border-t border-gray-200 ">
     <div v-for="(voice, index) in voices" :key="index" class="w-full md:w-1/2 px-2 text-center">
-      <ButtonVoices :text="voice.text" :voice="voice.voice" :tags="voice.tags"/>
+      <ButtonVoices :slug="voice.slug" :voice_url="voice.voice_url" :tags="voice.tags"/>
     </div>
   </div>
 </template>

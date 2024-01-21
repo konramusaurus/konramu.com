@@ -2,12 +2,20 @@
   <div v-for="(voicemap, index) in voices" :key="index">
     <ContentVoices 
         :videoTitle="voicemap.title"
-        :videoURL="voicemap.url"
+        :videoURL="voicemap.video_url"
         :voices="voicemap.voices"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { voices } from '@/voices/index';
+import type { VoiceMap } from '@/types/index';
+
+interface Props {
+  voices: VoiceMap[];
+}
+const Props = withDefaults(defineProps<Props>(), {
+  tag: '',
+});
+
 </script>

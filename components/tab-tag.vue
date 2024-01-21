@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { voices } from '@/voices/index';
+// import { voices } from '@/voices/index';
 
 interface Props {
   tag: string;
@@ -16,7 +16,7 @@ const Props = withDefaults(defineProps<Props>(), {
   tag: '',
 });
 
-const taggedVoices = () => {
-  return voices.flatMap(v => v.voices).filter(v => v.tags.includes(Props.tag));
-}
+// const taggedVoices = () => {
+//   return voices.flatMap(v => v.voices).filter(v => v.tags.includes(Props.tag));
+// }
 </script>
