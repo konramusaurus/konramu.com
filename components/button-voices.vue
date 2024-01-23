@@ -1,7 +1,7 @@
 <template>
   <div class="my-2 group">
     <p class="text-left text-gray-400 text-xs opacity-0 group-hover:transition-opacity group-hover:opacity-100 ease-in-out duration-500">
-      <span v-if="tags.length == 0" class="mr-1 text-gray-300">
+      <span v-if="tags.length === 0 || !tags[0]" class="mr-1 text-gray-300">
         <button>#notags</button>
       </span>
       <span v-else class="mr-1 hover:text-pink-400 transition ease-in-out duration-500" v-for="tag of tags.sort()">

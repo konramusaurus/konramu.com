@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col text-center w-full mt-12">
     <a :href="videoURL">
-      <h2 class="text-xl font-medium text-gray-900">{{ videoTitle }}</h2>
+      <h2 class="text-xl font-medium text-gray-900 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:bg-gray-100 duration-300">{{ videoTitle }}</h2>
     </a>
   </div>
   <div class="w-full mx-auto mt-5 flex flex-wrap border-t border-gray-200 ">
